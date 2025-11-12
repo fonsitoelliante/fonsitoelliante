@@ -1,1 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HitBub – Tu Agencia de Viajes</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
 
+        header {
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        nav {
+            background-color: #0077b6;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd60a;
+        }
+
+        .destinos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            margin-top: 0;
+            color: #0077b6;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #e63946;
+        }
+
+        footer {
+            background-color: #023e8a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HitBub</h1>
+        <p>Tu aventura empieza aquí 🌴✈️</p>
+    </header>
+
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Destinos</a>
+        <a href="#">Ofertas</a>
+        <a href="#">Contacto</a>
+    </nav>
+
+    <section class="destinos">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Maldivas">
+            <div class="card-content">
+                <h3>Maldivas</h3>
+                <p>Relájate en playas de arena blanca y aguas turquesas. Un paraíso para los amantes del sol y el mar.</p>
+                <p class="price">Desde 1.499€ por persona</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" alt="París">
+            <div class="card-content">
+                <h3>París, Francia</h3>
+                <p>Descubre la ciudad del amor, con su Torre Eiffel, su exquisita gastronomía y su encanto único.</p>
+                <p class="price">Desde 899€ por persona</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126" alt="Tokio">
+            <div class="card-content">
+                <h3>Tokio, Japón</h3>
+                <p>Sumérgete en una mezcla perfecta de tradición y modernidad. ¡Una experiencia inolvidable!</p>
+                <p class="price">Desde 1.299€ por persona</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c" alt="Nueva York">
+            <div class="card-content">
+                <h3>Nueva York, EE.UU.</h3>
+                <p>Explora la Gran Manzana, disfruta de Broadway, Central Park y las luces de Times Square.</p>
+                <p class="price">Desde 1.050€ por persona</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 HitBub – Agencia de Viajes. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
