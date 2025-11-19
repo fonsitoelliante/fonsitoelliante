@@ -133,10 +133,9 @@ nav a:hover { color: #ffcc00; }
 .project-card {
     background: #fff;
     border-radius: 15px;
-    padding-bottom: 20px;
+    padding: 20px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     transition: transform .4s, box-shadow .4s;
-    overflow: hidden;
 }
 
 .project-card:hover {
@@ -146,22 +145,26 @@ nav a:hover { color: #ffcc00; }
 
 .card-img {
     height: 180px;
-    background-size: cover;
-    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
-.project-card h3 { color: #004D99; margin: 15px 0 10px; }
-.project-card p { font-size: 16px; padding: 0 15px; }
+/* Usaremos colores sólidos en lugar de imágenes */
+.card-img:nth-child(1) { background-color: #004D99; }
+.card-img:nth-child(2) { background-color: #0066cc; }
+.card-img:nth-child(3) { background-color: #3399ff; }
+.card-img:nth-child(4) { background-color: #002868; }
+
+.project-card h3 { color: #004D99; margin: 10px 0; }
+.project-card p { font-size: 16px; margin-bottom: 15px; }
 
 .btn-card {
     display: inline-block;
-    margin-top: 10px;
     padding: 10px 25px;
     background: #002868;
     color: #fff;
     border-radius: 6px;
     transition: .3s;
-    margin-bottom: 10px;
 }
 
 .btn-card:hover { background: #ffcc00; color: #002868; }
@@ -274,25 +277,25 @@ footer {
     <h2>Proyectos Destacados</h2>
     <div class="portfolio-grid">
         <div class="project-card">
-            <div class="card-img" style="background-image:url('https://i.imgur.com/0Z8FQNA.jpeg');"></div>
+            <div class="card-img"></div>
             <h3>Proyecto 1</h3>
             <p>Diseño web con temática deportiva y enfoque moderno.</p>
             <a href="#" class="btn-card">Ver más</a>
         </div>
         <div class="project-card">
-            <div class="card-img" style="background-image:url('https://i.imgur.com/A3Yas5O.jpeg');"></div>
+            <div class="card-img"></div>
             <h3>Proyecto 2</h3>
             <p>App para registrar entrenamientos con análisis básico.</p>
             <a href="#" class="btn-card">Ver más</a>
         </div>
         <div class="project-card">
-            <div class="card-img" style="background-image:url('https://i.imgur.com/j9m0BOc.jpeg');"></div>
+            <div class="card-img"></div>
             <h3>Proyecto 3</h3>
             <p>Dashboard de rendimiento deportivo con gráficas.</p>
             <a href="#" class="btn-card">Ver más</a>
         </div>
         <div class="project-card">
-            <div class="card-img" style="background-image:url('https://i.imgur.com/wOSFqYv.jpeg');"></div>
+            <div class="card-img"></div>
             <h3>Proyecto 4</h3>
             <p>Landing page profesional para club juvenil.</p>
             <a href="#" class="btn-card">Ver más</a>
