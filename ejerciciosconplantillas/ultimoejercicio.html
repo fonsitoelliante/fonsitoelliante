@@ -4,18 +4,234 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio | Alfonso Nieto García</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- =========================== -->
+    <!-- 🔵 ESTILOS CSS INCLUIDOS -->
+    <!-- =========================== -->
+    <style>
+        /* =============================== */
+        /* 🔵 ESTILOS GENERALES */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #ececec;
+            color: #222;
+        }
+
+        img { user-select: none; }
+
+        a { text-decoration: none; }
+
+        /* =============================== */
+        /* 🔵 HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            background: rgba(0,0,0,0.4);
+        }
+
+        .logo { display: flex; align-items: center; }
+
+        .logo img { width: 50px; margin-right: 10px; }
+
+        .logo span { font-size: 20px; font-weight: 700; color: #fff; }
+
+        nav a { margin-left: 20px; color: #fff; font-weight: 600; transition: .3s; }
+
+        nav a:hover { color: #ffcc00; }
+
+        /* =============================== */
+        /* 🟢 HERO */
+        .hero {
+            height: 100vh;
+            background: url('https://i.imgur.com/6SDl0hZ.jpeg') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,40,104,0.5);
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            z-index: 2;
+        }
+
+        .fade-in { opacity: 0; animation: fade 1.3s forwards; }
+        .delay1 { animation-delay: .4s; }
+        .delay2 { animation-delay: .8s; }
+
+        @keyframes fade { to { opacity: 1; } }
+
+        .hero h1 {
+            font-size: 60px;
+            font-weight: 900;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        .btn {
+            padding: 14px 30px;
+            background: #ffcc00;
+            color: #002868;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .btn:hover { background: white; }
+
+        /* =============================== */
+        /* 🟡 SOBRE MÍ */
+        .about {
+            padding: 100px 10%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-card {
+            background: white;
+            padding: 40px;
+            display: flex;
+            gap: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.2);
+            max-width: 900px;
+        }
+
+        .profile { width: 250px; border-radius: 200px; }
+
+        .skills li { margin-bottom: 5px; }
+
+        /* =============================== */
+        /* 🔴 PORTAFOLIO */
+        .portfolio {
+            padding: 100px 10%;
+            text-align: center;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 35px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 15px;
+            padding-bottom: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            transition: .4s;
+            overflow: hidden;
+        }
+
+        .project-card:hover { transform: translateY(-10px) scale(1.03); }
+
+        .card-img {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .btn-card {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 20px;
+            background: #002868;
+            color: #fff;
+            border-radius: 6px;
+            transition: .3s;
+        }
+
+        .btn-card:hover { background: #ffcc00; color: #002868; }
+
+        /* =============================== */
+        /* 🟦 CONTACTO */
+        .contact {
+            padding: 100px 10%;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            margin: 10px 0;
+            padding: 14px;
+            border-radius: 8px;
+            border: 1px solid #aaa;
+        }
+
+        .btn-send {
+            padding: 14px;
+            background: #002868;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: .3s;
+        }
+
+        .btn-send:hover { background: #ffcc00; color: #002868; }
+
+        .social-icons img {
+            width: 40px;
+            margin: 10px;
+        }
+
+        /* =============================== */
+        /* ⚫ FOOTER */
+        footer {
+            background: #002868;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        /* =============================== */
+        /* 📱 RESPONSIVE */
+        @media (max-width: 900px) {
+            .about-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile { width: 200px; }
+            .hero h1 { font-size: 45px; }
+        }
+
+    </style>
 </head>
 <body>
 
-    <!-- 🔵 MENU SUPERIOR -->
+    <!-- ========================= -->
+    <!-- 🔵 HEADER -->
     <header>
         <div class="logo">
-            <img src="imagenes/imagen9.jpeg">
+            <img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg">
             <span>Alfonso Nieto García</span>
         </div>
-
         <nav>
             <a href="#inicio">Inicio</a>
             <a href="#sobre-mi">Sobre mí</a>
@@ -24,6 +240,7 @@
         </nav>
     </header>
 
+    <!-- ========================= -->
     <!-- 🟢 HERO -->
     <section id="inicio" class="hero">
         <div class="hero-overlay"></div>
@@ -34,18 +251,17 @@
         </div>
     </section>
 
+    <!-- ========================= -->
     <!-- 🟡 SOBRE MÍ -->
     <section id="sobre-mi" class="about">
         <div class="about-card">
             <img src="https://i.imgur.com/3yVxZfC.png" class="profile">
-
             <div class="about-text">
                 <h2>Sobre mí</h2>
                 <p>
                     Soy Alfonso, una persona responsable, creativa y apasionada por el deporte y el aprendizaje continuo.
                     Disfruto trabajar en equipo, asumir retos y mejorar día a día.
                 </p>
-
                 <h3>Habilidades</h3>
                 <ul class="skills">
                     <li>Comunicación efectiva</li>
@@ -58,58 +274,48 @@
         </div>
     </section>
 
+    <!-- ========================= -->
     <!-- 🔴 PORTAFOLIO -->
     <section id="portafolio" class="portfolio">
         <h2>Proyectos Destacados</h2>
-
         <div class="portfolio-grid">
-
-            <!-- Proyecto 1 -->
             <div class="project-card">
                 <div class="card-img" style="background-image:url('https://i.imgur.com/0Z8FQNA.jpeg');"></div>
                 <h3>Proyecto 1</h3>
                 <p>Diseño web con temática deportiva y enfoque moderno.</p>
                 <a href="#" class="btn-card">Ver más</a>
             </div>
-
-            <!-- Proyecto 2 -->
             <div class="project-card">
                 <div class="card-img" style="background-image:url('https://i.imgur.com/A3Yas5O.jpeg');"></div>
                 <h3>Proyecto 2</h3>
                 <p>App para registrar entrenamientos con análisis básico.</p>
                 <a href="#" class="btn-card">Ver más</a>
             </div>
-
-            <!-- Proyecto 3 -->
             <div class="project-card">
                 <div class="card-img" style="background-image:url('https://i.imgur.com/j9m0BOc.jpeg');"></div>
                 <h3>Proyecto 3</h3>
                 <p>Dashboard de rendimiento deportivo con gráficas.</p>
                 <a href="#" class="btn-card">Ver más</a>
             </div>
-
-            <!-- Proyecto 4 -->
             <div class="project-card">
                 <div class="card-img" style="background-image:url('https://i.imgur.com/wOSFqYv.jpeg');"></div>
                 <h3>Proyecto 4</h3>
                 <p>Landing page profesional para club juvenil.</p>
                 <a href="#" class="btn-card">Ver más</a>
             </div>
-
         </div>
     </section>
 
+    <!-- ========================= -->
     <!-- 🟦 CONTACTO -->
     <section id="contacto" class="contact">
         <h2>Contacto</h2>
-
         <form class="contact-form">
             <input type="text" placeholder="Nombre completo" required>
             <input type="email" placeholder="Correo" required>
             <textarea placeholder="Escribe tu mensaje..." required></textarea>
             <button type="submit" class="btn-send">Enviar mensaje</button>
         </form>
-
         <div class="social-icons">
             <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
             <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
@@ -117,7 +323,8 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- ========================= -->
+    <!-- ⚫ FOOTER -->
     <footer>
         © 2025 Alfonso Nieto García | Todos los derechos reservados.
     </footer>
