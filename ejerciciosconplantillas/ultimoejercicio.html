@@ -131,11 +131,16 @@ nav a:hover { color: #ffcc00; }
 }
 
 .project-card {
-    background: #fff;
+    background: linear-gradient(135deg, #004D99, #3399ff);
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     transition: transform .4s, box-shadow .4s;
+    color: #fff;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .project-card:hover {
@@ -143,31 +148,21 @@ nav a:hover { color: #ffcc00; }
     box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
-.card-img {
-    height: 180px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-/* Usaremos colores sólidos en lugar de imágenes */
-.card-img:nth-child(1) { background-color: #004D99; }
-.card-img:nth-child(2) { background-color: #0066cc; }
-.card-img:nth-child(3) { background-color: #3399ff; }
-.card-img:nth-child(4) { background-color: #002868; }
-
-.project-card h3 { color: #004D99; margin: 10px 0; }
+.project-card h3 { margin: 10px 0; font-size: 24px; }
 .project-card p { font-size: 16px; margin-bottom: 15px; }
 
 .btn-card {
     display: inline-block;
     padding: 10px 25px;
-    background: #002868;
-    color: #fff;
+    background: #ffcc00;
+    color: #002868;
     border-radius: 6px;
+    font-weight: 700;
     transition: .3s;
+    align-self: start;
 }
 
-.btn-card:hover { background: #ffcc00; color: #002868; }
+.btn-card:hover { background: #fff; color: #002868; }
 
 /* ===================== CONTACTO ===================== */
 .contact {
@@ -277,25 +272,21 @@ footer {
     <h2>Proyectos Destacados</h2>
     <div class="portfolio-grid">
         <div class="project-card">
-            <div class="card-img"></div>
             <h3>Proyecto 1</h3>
             <p>Diseño web con temática deportiva y enfoque moderno.</p>
             <a href="#" class="btn-card">Ver más</a>
         </div>
         <div class="project-card">
-            <div class="card-img"></div>
             <h3>Proyecto 2</h3>
             <p>App para registrar entrenamientos con análisis básico.</p>
             <a href="#" class="btn-card">Ver más</a>
         </div>
         <div class="project-card">
-            <div class="card-img"></div>
             <h3>Proyecto 3</h3>
             <p>Dashboard de rendimiento deportivo con gráficas.</p>
             <a href="#" class="btn-card">Ver más</a>
         </div>
         <div class="project-card">
-            <div class="card-img"></div>
             <h3>Proyecto 4</h3>
             <p>Landing page profesional para club juvenil.</p>
             <a href="#" class="btn-card">Ver más</a>
